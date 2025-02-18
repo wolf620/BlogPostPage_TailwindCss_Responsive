@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blog Landing Page</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <script>
+      // !
+      const navbar = document.getElementById("mobile_navbar");
+      function ShowNavbar(element) {
+        document.getElementById("mobile_navbar").classList.contains("hidden")
+          ? document.getElementById("mobile_navbar").classList.remove("hidden")
+          : document.getElementById("mobile_navbar").classList.add("hidden");
+        document.getElementById("X_icon").classList.contains("hidden")
+          ? document.getElementById("X_icon").classList.remove("hidden")
+          : document.getElementById("X_icon").classList.add("hidden");
+        document.getElementById("Undo_X_icon").classList.contains("hidden")
+          ? document.getElementById("Undo_X_icon").classList.remove("hidden")
+          : document.getElementById("Undo_X_icon").classList.add("hidden");
+      }
+    </script>
+  </head>
+
+  <body class="font-body">
+    <!-- ! NavBar Element -->
+    <div class="w-full bg-prim shadow-md py-4 flex flex-col px-12 space-y-4">
+      <div class="font-title text-xl flex justify-between items-center">
+        <div class="flex items-center space-x-4">
+          <svg
+            class="w-8 h-8 text-white"
+            xmlns="http://www.w3.org/2000/svg"
+            height="1504"
+            width="2500"
+            viewbox="0 0 256 153.6"
+          >
+            <lineargradient id="a" x1="-2.778%" y1="32%" y2="67.556%">
+              <stop offset="0" stop-color="#ffffff" />
+              <stop offset="1" stop-color="#ffffff" />
+            </lineargradient>
+            <path
+              d="M128 0C93.867 0 72.533 17.067 64 51.2 76.8 34.133 91.733 27.733 108.8 32c9.737 2.434 16.697 9.499
+         24.401 17.318C145.751 62.057 160.275 76.8 192 76.8c34.133 0 55.467-17.067 64-51.2-12.8 17.067-27.733 23.467-44.8 
+         19.2-9.737-2.434-16.697-9.499-24.401-17.318C174.249 14.743 159.725 0 128 0zM64 76.8C29.867 76.8 8.533 93.867
+          0 128c12.8-17.067 27.733-23.467 44.8-19.2 9.737 2.434 16.697 9.499 24.401 17.318C81.751 138.857 96.275 153.6
+           128 153.6c34.133 0 55.467-17.067 64-51.2-12.8 17.067-27.733 23.467-44.8 19.2-9.737-2.434-16.697-9.499-24.401-17.318C110.249 
+           91.543 95.725 76.8 64 76.8z"
+              fill="url(#a)"
+            />
+          </svg>
+          <span class="text-white">TailwindCSS </span>
+        </div>
+        <div class="inline-blcok md:block hidden">
+          <nav class="">
+            <ul class="flex">
+              <li class="mr-4 hover-underline-animation hover:text-red-400">
+                <a href="#Home" class="text-white">Home</a>
+              </li>
+              <li class="mr-4 hover-underline-animation">
+                <a href="#About" class="text-white">About</a>
+              </li>
+              <li class="mr-4 hover-underline-animation">
+                <a href="#Contact" class="text-white">Contact</a>
+              </li>
+              <li class="mr-4 hover-underline-animation">
+                <a href="#Contact" class="text-white">Products & Shop</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+
+        <svg
+          id="Undo_X_icon"
+          onclick="ShowNavbar(navbar)"
+          xmlns="http://www.w3.org/2000/svg"
+          class="h-6 w-6 text-white block md:hidden cursor-pointer"
+          viewbox="0 0 20 20"
+          fill="currentColor"
+        >
+          <path
+            fill-rule="evenodd"
+            d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+            clip-rule="evenodd"
+          />
+        </svg>
+        <svg
+          id="X_icon"
+          onclick="ShowNavbar(navbar)"
+          xmlns="http://www.w3.org/2000/svg"
+          class="h-6 w-6 hidden cursor-pointer"
+          viewbox="0 0 20 20"
+          fill="#ffffff"
+        >
+          <path
+            fill-rule="evenodd"
+            d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+            clip-rule="evenodd"
+          />
+        </svg>
+      </div>
+
+      <nav
+        id="mobile_navbar"
+        class="text-white font-title md:hidden hidden underline-offset-2 underline px-2"
+      >
+        <ul class="flex flex-col space-y-4">
+          <li class="mr-4 flex space-x-1 items-center">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-4 w-4"
+              viewbox="0 0 20 20"
+              fill="currentColor"
+            >
+              <path
+                d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z"
+              />
+            </svg>
+            <a href="#Home" class="text-white">Home</a>
+          </li>
+          <li class="mr-4 flex space-x-1 items-center">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-4 w-4"
+              viewbox="0 0 20 20"
+              fill="currentColor"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z"
+                clip-rule="evenodd"
+              />
+            </svg>
+            <a href="#About" class="text-white">About</a>
+          </li>
+          <li class="mr-4 flex space-x-1 items-center">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-4 w-4"
+              viewbox="0 0 20 20"
+              fill="currentColor"
+            >
+              <path
+                d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"
+              />
+              <path
+                d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"
+              />
+            </svg>
+            <a href="#Contact" class="text-white">Contact</a>
+          </li>
+          <li class="mr-4 flex space-x-1 items-center">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-4 w-4"
+              viewbox="0 0 20 20"
+              fill="currentColor"
+            >
+              <path
+                d="M3 1a1 1 0 000 2h1.22l.305 1.222a.997.997 0 00.01.042l1.358 5.43-.893.892C3.74 11.846 4.632 14 6.414 14H15a1 1 0 000-2H6.414l1-1H14a1 1 0 00.894-.553l3-6A1 1 0 0017 3H6.28l-.31-1.243A1 1 0 005 1H3zM16 16.5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM6.5 18a1.5 1.5 0 100-3 1.5 1.5 0 000 3z"
+              />
+            </svg>
+            <a href="#Home" class="text-white">Products & Shop</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+
+    <div class="container px-4 mx-auto max-w-5xl">
+      <!-- ? INFORMATIONAL header -->
+      <div class="text-center py-14">
+        <h1
+          class="lg:text-5xl sm:text-4xl text-3xl fot-bold font-title text-sec"
+        >
+          Latest Blog<br />
+          <span class="text-prim">Posts</span>
+        </h1>
+        <p class="text-prim max-w-xs mx-auto py-6">
+          Welcome to our blog site. Get our latest news with just one search!
+        </p>
+        <input
+          class="bg-our-bg mx-auto px-6 py-2 rounded-3xl shadow-inner focus:outline-none focus:ring-2 ring-sec"
+          type="search"
+          placeholder="Search"
+        />
+      </div>
+      <section class="main">
+        <!-- ? INFORMATIONAL Grid Element -->
+        <div
+          class="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 lg:gap-y-16 md:gap-y-12 gap-y-8 lg:gap-x-12 gap-x-12"
+        >
+          <!-- ? INFORMATIONAL Featured Blog, First row -->
+          <div class="lg:col-span-3 md:col-span-2 col-span-1">
+            <div
+              href="#"
+              class="border border-gray-100 md:flex rounded-3xl overflow-hidden hover:shadow-lg transition duration-300"
+            >
+              <div class="md:w-1/2 w-full">
+                <img src="img/img1.jpg" alt="" />
+              </div>
+              <div class="md:w-1/2 w-full sm:px-7 sm:py-7 px-2 py-2">
+                <span class="px-3 py-1 bg-our-bg rounded text-sec text-xs"
+                  >FEATURED</span
+                >
+                <h2 class="card-heading">
+                  Why is it important to follow a Brand Style Guide for your
+                  business?
+                </h2>
+                <p class="text-gen pb-5">
+                  A brand style guide is also known as a bran guide or bran
+                  book. For many companies, the guide is essential to maintain
+                  their brand identity. For them, such a well-thought-of guide
+                  becomes their key document, which serves as serves as a guide
+                  to create a variety of content for brand marketing.
+                </p>
+                <div class="flex items-center">
+                  <img
+                    src="img/author1.jpg"
+                    alt=""
+                    class="w-9 h-9 rounded-full"
+                  />
+                  <div class="pl-3">
+                    <h6 class="font-bold text-prim">John Doe</h6>
+                    <p class="text-xs text-gen">Brant specialist</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- ? INFORMATIONAL second row of the blog-->
+          <!-- ? INFORMATIONAL First Item -->
+          <div class="blog-card">
+            <a href="" class="">
+              <img src="img/img2.jpg" alt="" class="" />
+              <div class="px-2 lg:px-4 sm:pb-6 pb-2">
+                <h2 class="card-heading">
+                  Why is it important to follow a Brand Style Guide for your
+                  business?
+                </h2>
+                <p class="text-gen pb-5">
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                  Pariatur fugiat molestias, minima odio ut perspiciatis nemo
+                  aperiam. Explicabo, quis veritatis!
+                </p>
+                <div class="flex items-center">
+                  <img
+                    src="img/author1.jpg"
+                    alt=""
+                    class="w-9 h-9 rounded-full"
+                  />
+                  <div class="pl-3">
+                    <h6 class="font-bold text-prim">John Doe</h6>
+                    <p class="text-xs text-gen">Brant specialist</p>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+          <!-- ? INFORMATIONAL Second Item  -->
+          <div class="blog-card">
+            <a href="" class="">
+              <img src="img/img3.jpg" alt="" class="" />
+              <div class="px-2 lg:px-4 sm:pb-6 pb-2">
+                <h2 class="card-heading">
+                  Why is it important to follow a Brand Style Guide for your
+                  business?
+                </h2>
+                <p class="text-gen pb-5">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio
+                  laboriosam provident at dolore, voluptas unde porro
+                  necessitatibus eum ducimus enim!
+                </p>
+                <div class="flex items-center">
+                  <img
+                    src="img/author1.jpg"
+                    alt=""
+                    class="w-9 h-9 rounded-full"
+                  />
+                  <div class="pl-3">
+                    <h6 class="font-bold text-prim">John Doe</h6>
+                    <p class="text-xs text-gen">Brant specialist</p>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+          <!-- ? INFORMATIONAL Third Item   -->
+          <div class="blog-card">
+            <a href="" class="">
+              <img src="img/img4.jpg" alt="" class="" />
+              <div class="px-2 lg:px-4 sm:pb-6 pb-2">
+                <h2 class="card-heading">
+                  Why is it important to follow a Brand Style Guide for your
+                  business?
+                </h2>
+                <p class="text-gen pb-5">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Fugiat sequi praesentium et obcaecati veritatis culpa nostrum
+                  inventore voluptatibus, assumenda facilis!
+                </p>
+                <div class="flex items-center">
+                  <img
+                    src="img/author1.jpg"
+                    alt=""
+                    class="w-9 h-9 rounded-full"
+                  />
+                  <div class="pl-3">
+                    <h6 class="font-bold text-prim">John Doe</h6>
+                    <p class="text-xs text-gen">Brant specialist</p>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+          <!-- ? INFORMATIONAL row 2 of the blog post -->
+          <!-- ? INFORMATIONAL item 1 -->
+          <div class="lg:col-span-2 col-span-1">
+            <div class="blog-card">
+              <a href="" class="">
+                <img src="img/img4.jpg" alt="" class="h-72 w-full" />
+                <div class="px-2 lg:px-4 sm:pb-6 pb-2">
+                  <h2 class="card-heading">
+                    Why is it important to follow a Brand Style Guide for your
+                    business?
+                  </h2>
+                  <p class="text-gen pb-5">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Fugiat sequi praesentium et obcaecati veritatis culpa
+                    nostrum inventore voluptatibus, assumenda facilis!
+                  </p>
+                  <div class="flex items-center">
+                    <img
+                      src="img/author1.jpg"
+                      alt=""
+                      class="w-9 h-9 rounded-full"
+                    />
+                    <div class="pl-3">
+                      <h6 class="font-bold text-prim">John Doe</h6>
+                      <p class="text-xs text-gen">Brant specialist</p>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+          <!-- ? INFORMATIONAL item 2 -->
+          <div class="blog-card">
+            <a href="" class="">
+              <img src="img/img4.jpg" alt="" class="" />
+              <div class="px-2 lg:px-4 sm:pb-6 pb-2">
+                <h2 class="card-heading">
+                  Why is it important to follow a Brand Style Guide for your
+                  business?
+                </h2>
+                <p class="text-gen pb-5">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Fugiat sequi praesentium et obcaecati veritatis culpa nostrum
+                  inventore voluptatibus, assumenda facilis!
+                </p>
+                <div class="flex items-center">
+                  <img
+                    src="img/author1.jpg"
+                    alt=""
+                    class="w-9 h-9 rounded-full"
+                  />
+                  <div class="pl-3">
+                    <h6 class="font-bold text-prim">John Doe</h6>
+                    <p class="text-xs text-gen">Brant specialist</p>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </section>
+      <!-- ? INFORMATIONALSubscrive section -->
+      <section class="">
+        <div class="text-center py-14">
+          <h1
+            class="lg:text-5xl sm:text-4xl text-3xl fot-bold font-title text-prim"
+          >
+            Subscribe to Our<br />
+            <span class="text-sec">Blog</span>
+          </h1>
+          <p class="text-prim max-w-xs mx-auto py-6">
+            Please subscribe to get regular updates and featured news through
+            your email!
+          </p>
+          <input
+            class="bg-our-bg mx-auto px-6 py-2 rounded-3xl shadow-inner focus:outline-none focus:ring-2 ring-sec"
+            type="email"
+            placeholder="Email Address"
+          />
+          <input
+            type="submit"
+            value="Submit"
+            class="-ml-8 px-8 py-2 rounded-3xl bg-sec text-white cursor-pointer hover:bg-blue-800 focus:ring-0"
+          />
+        </div>
+      </section>
+    </div>
+    <footer class="bg-prim">
+      <div
+        class="flex flex-col sm:flex-row jutisfy-center items-center text-white px-12 py-8 font-title font-extrabold sm:justify-between tracking-wider"
+      >
+        <p class="">ANAFLOUS Abdellatif</p>
+        <p class="">All rights is reserved © 2022</p>
+      </div>
+    </footer>
+  </body>
+</html>
